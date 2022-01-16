@@ -39,6 +39,22 @@ const UserSchema = new mongose.Schema({
     type: Boolean,
     default: false,
   },
+  desc: {
+    type: String,
+    max: 50,
+  },
+  city: {
+    type: String,
+    max: 50,
+  },
+  from: {
+    type: String,
+    max: 50,
+  },
+  relationShip: {
+    type: Number,
+    enum: [1, 2, 3],
+  }
 }, { timestamps: true });
 
 module.exports = mongoose.model('User', UserSchema);
